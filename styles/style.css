@@ -7,6 +7,7 @@
 body {
   background-color: #0d0d0d;
   font-family: "Sofia Sans";
+  color: #ffffff;
 }
 
 li {
@@ -23,7 +24,7 @@ a {
 }
 
 nav {
-  margin-top: 20px;
+  margin: 40px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,14 +37,14 @@ nav > div {
   gap: 40px;
   padding: 40px;
   width: 300px;
-  height: 100vh;
+  min-height: 100vh;
   position: absolute;
   right: 0px;
   top: 0;
   background-color: #f65f5f;
   box-shadow: 0 0 10px #f65f5f;
   opacity: 0;
-  visibility: none;
+  visibility: hidden;
   font-size: 18px;
 }
 
@@ -61,6 +62,222 @@ nav button {
   font-size: 18px;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-image {
+  position: relative;
+  margin: 40px 0;
+}
+
+.header-image > img:first-child {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.fire-image {
+  width: 10%;
+  position: absolute;
+  top: -10%;
+  left: 45%;
+}
+
+.ellipse {
+  width: 100%;
+  position: absolute;
+  bottom: -10%;
+}
+
+.food1 {
+  width: 20%;
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+}
+
+.food2 {
+  width: 20%;
+  position: absolute;
+  bottom: -10%;
+  right: 25%;
+}
+
+.food3 {
+  width: 20%;
+  position: absolute;
+  bottom: -10%;
+  left: 25%;
+}
+
+.food4 {
+  width: 20%;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+}
+
+.card {
+  background-color: #0d0d0d;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #424242;
+  position: absolute;
+  left: 0;
+  top: 30%;
+  padding: 5px;
+}
+
+.card > img {
+  width: 40%;
+  border-radius: 5px;
+}
+
+.card p {
+  font-size: 2vw;
+}
+
+li > .star-icon {
+  color: yellow;
+  font-size: 2vw;
+}
+
+.card ul {
+  display: flex;
+  gap: 3px;
+}
+
+.card2 {
+  background-color: #0d0d0d;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 40%;
+  border-radius: 50px;
+  box-shadow: 0 0 5px #424242;
+  position: absolute;
+  right: -20px;
+  top: 30%;
+  padding: 5px;
+}
+
+.card2 p {
+  font-size: 2vw;
+}
+
+.star-icon {
+  color: yellow;
+}
+
+.header-info {
+  margin: 100px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.header-info > p:first-child {
+  background-color: #f65f5f42;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 14px;
+}
+
+.header-info > p:first-child i {
+  background-color: #f65f5f;
+  color: #fdce77;
+  padding: 5px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.header-info > h1 {
+  font-size: 48px;
+}
+
+.header-info > h1 span {
+  color: #f65f5f;
+}
+
+.header-info > h1 span:last-child {
+  color: #fdce77;
+}
+
+.header-info > p {
+  font-size: 20px;
+}
+
+.header-search {
+  border: 1px solid white;
+  width: 100%;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+}
+
+.header-search i {
+  color: #0d0d0d;
+  padding: 9px;
+  background-color: #fdce77;
+  border-radius: 50%;
+}
+
+.header-search i:first-child {
+  color: white;
+  background-color: #0d0d0d;
+}
+
+.header-info input{
+  width: 100%;
+  background-color: #0d0d0d;
+  border: none;
+}
+
+.header-info input:focus{
+  border: none;
+  outline: none;
+  color: #ffffff;
+}
+
+.downloads{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.downloads button{
+  color: #0d0d0d;
+  background-color: #f65f5f;
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: none;
+}
+
+.downloads i{
+  color: #f65f5f;
+  padding: 15px;
+  box-shadow: 0 0 10px #f65f5f;
+  border-radius: 50%;
+}
+
+.decor1{
+  position: absolute;
+  top: 0;
+  right: -30px;
+  width: 60vw;
+}
+
 @media screen and (min-width: 900px) {
   nav > div {
     flex-direction: row;
@@ -68,7 +285,7 @@ nav button {
     align-items: center;
     padding: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     position: relative;
     background-color: #0d0d0d;
     box-shadow: none;
@@ -87,4 +304,35 @@ nav button {
   nav > svg {
     display: none;
   }
+
+  header {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .header-image {
+    width: 50%;
+  }
+
+  .card p {
+    font-size: 1vw;
+  }
+
+  li > .star-icon {
+    font-size: 1vw;
+  }
+
+  .card2 p {
+    font-size: 1vw;
+  }
+
+  .header-info {
+    width: 40%;
+  }
+
+  .decor1{
+    width: 30vw;
+  }
+  
 }
